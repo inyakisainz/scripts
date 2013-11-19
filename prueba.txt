@@ -1,1 +1,2 @@
-Documento de prueba
+Documento de prueba.
+Se añade otra linea
