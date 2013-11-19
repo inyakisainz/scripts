@@ -18,7 +18,7 @@ public abstract class FrameworkLoader {
 	}
 
 	public String toCode(ArrayList<String>... urlsList) {
-		String baseURL = "https://raw.github.com/dsanz/scripts/master/symp-2013/"
+		String baseURL = "@baseURL";
 		StringBundler code = new StringBundler();
 		for (ArrayList<String> urlList : urlsList) {
 			for (String url : urlList) {
