@@ -2,12 +2,14 @@ package util
 
 import core.builders.CommandBuilder
 import core.resulthandlers.LiferayConsoleOutputHandler;
+import com.liferay.portal.kernel.cluster.ClusterExecutorUtil;
 
 out.print("Starting...");
 
-boolean isCluster=true;
+// Dynamic determine if runnen on cluster or not
+boolean isCluster=ClusterExecutorUtil.isEnabled();
 
-cb = new CommandBuilder("https://raw.github.com/dsanz/scripts/master/symp-2013/", isCluster);
+cb = new CommandBuilder("https://raw.github.com/inyakisainz/scripts/master/symp-2013/", isCluster);
 cb.appendCommand("commands/MemoryUsageCommand.groovy", "MemoryUsageCommand");
 cb.appendCommand("commands/GetPortalImplManifestAttrsCommand.groovy", "GetPortalImplManifestAttrsCommand");
 cb.appendCommand("commands/GetMachineMemoryCommand.groovy", "GetMachineMemoryCommand");
