@@ -12,7 +12,7 @@ class GetDiffPortalPropertiesCommand extends Command {
 	
 	public void execute() {
 	
-		InputStream result = PropertiesUtil.load(getClass().getClassLoader().getResourceAsStream("portal.properties"),"UTF-8")
+		Properties result = PropertiesUtil.load(getClass().getClassLoader().getResourceAsStream("portal.properties"),"UTF-8")
 		Properties systemProp = PropsUtil.getProperties()
 		
 		//order properties
