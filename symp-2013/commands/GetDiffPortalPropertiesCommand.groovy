@@ -19,7 +19,7 @@ class GetDiffPortalPropertiesCommand extends Command {
 		TreeMap treeMap2 = new TreeMap(systemProp);
 		Iterator itr2 = treeMap2.keySet().iterator();
 		   while (itr2.hasNext()) {
-				envKey = itr2.next();
+				String envKey = (String) itr2.next();
 				if (!result.getProperty(envKey).equals(systemProp.getProperty(envKey))) {
 					addResult(envKey, systemProp.getProperty(envKey))
 				}
