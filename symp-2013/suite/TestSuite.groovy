@@ -1,5 +1,3 @@
-package suite
-
 import core.builders.CommandBuilder
 import core.resulthandlers.LiferayConsoleOutputHandler;
 import com.liferay.portal.kernel.cluster.ClusterExecutorUtil;
