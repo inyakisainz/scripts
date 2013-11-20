@@ -14,6 +14,7 @@ cb.appendCommand("commands/GetPortalImplManifestAttrsCommand.groovy", "GetPortal
 //cb.appendCommand("commands/GetMachineMemoryCommand.groovy", "GetMachineMemoryCommand");
 cb.appendCommand("commands/GetJVMInfoCommand.groovy", "GetJVMInfoCommand");
 cb.appendCommand("commands/GetCPUInfoCommand.groovy", "GetCPUInfoCommand");
+cb.appendCommand("commands/GetDiffPortalPropertiesCommand.groovy", "GetDiffPortalPropertiesCommand");
 cb.start(new LiferayConsoleOutputHandler(out));
 
 
