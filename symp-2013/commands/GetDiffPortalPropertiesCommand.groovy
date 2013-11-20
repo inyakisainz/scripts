@@ -12,14 +12,12 @@ class GetDiffPortalPropertiesCommand extends Command {
 	
 	public void execute() {
 	
-		result = PropertiesUtil.load(getClass().getClassLoader().getResourceAsStream("portal.properties"),"UTF-8")
-		systemProp = PropsUtil.getProperties()
+		InputStream result = PropertiesUtil.load(getClass().getClassLoader().getResourceAsStream("portal.properties"),"UTF-8")
+		Properties systemProp = PropsUtil.getProperties()
 		
 		//order properties
-		
-		Iterator itr2;
 		TreeMap treeMap2 = new TreeMap(systemProp);
-		itr2 = treeMap2.keySet().iterator();
+		Iterator itr2 = treeMap2.keySet().iterator();
 		   while (itr2.hasNext()) {
 				envKey = itr2.next();
 				if (!result.getProperty(envKey).equals(systemProp.getProperty(envKey))) {
