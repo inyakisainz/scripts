@@ -26,7 +26,9 @@ public class LiferayConsoleOutputHandler implements ResultHandler {
 		_log.error("Generating pretty-printed output for Scripting Console out writer");
 		_out.print("<br>All command results have been received. Pretty-printing...<br>");
 		_out.print("<div id='clustermonitorresult'></div>");
-		_out.println("<script src='https://raw.github.com/padolsey/prettyPrint.js/master/prettyprint.js'></script>");
+		// The server rawgithub.com instead of raw.github.com has "application/javascript" content type associated 
+		// isntead of "text/plain". This enable the script to be used under Chrome
+		_out.println("<script src='https://rawgithub.com/padolsey/prettyPrint.js/master/prettyprint.js'></script>");
 		_out.println("<script type='text/javascript'>");
 		_out.println("var r=" + crl.getResultAsString() + ";");
 		_out.println("var tbl = prettyPrint(r);");
